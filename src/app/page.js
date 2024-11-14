@@ -5,18 +5,18 @@ import { AuthContext } from "@/context/AuthContext"
 import { CarTaxiFront } from 'lucide-react'
 
 const regions = [
-  { name: "Andijan", image: "Andijan.jpg" },
-  { name: "Bukhara", image: "Bukhara.jpg" },
-  { name: "Fergana", image: "Fergana.jpg" },
-  { name: "Jizzakh", image: "Jizzakh.jpg" },
-  { name: "Kashkadarya", image: "Kashkadarya.jpg" },
-  { name: "Khorezm", image: "Khorezm.jpg" },
+  { name: "Andijon", image: "Andijan.jpg" },
+  { name: "Buxoro", image: "Bukhara.jpg" },
+  { name: "Farg`ona", image: "Fergana.jpg" },
+  { name: "Jizzax", image: "Jizzakh.jpg" },
+  { name: "Qashqadaryo", image: "Kashkadarya.jpg" },
+  { name: "Xorazm", image: "Khorezm.jpg" },
   { name: "Namangan", image: "Namangan.jpg" },
   { name: "Navoiy", image: "Navoiy.jpg" },
-  { name: "Samarkand", image: "Samarkand.jpg" },
-  { name: "Sirdarya", image: "Sirdarya.jpg" },
-  { name: "Surkhandarya", image: "Surkhandarya.jpg" },
-  { name: "Tashkent", image: "Tashkent.jpg" },
+  { name: "Samarqand", image: "Samarkand.jpg" },
+  { name: "Sirdaryo", image: "Sirdarya.jpg" },
+  { name: "Surxondaryo", image: "Surkhandarya.jpg" },
+  { name: "Toshkent", image: "Tashkent.jpg" },
 ]
 
 const messages = [

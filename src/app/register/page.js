@@ -34,11 +34,11 @@ const Register = () => {
     <div className="flex justify-center items-center min-h-screen bg-gray-900">
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">Register</h2>
+          <h2 className="text-2xl font-bold mb-4">Ro`yhatdan o`tish</h2>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="form-group">
-            <label className="block text-gray-700">Name</label>
+            <label className="block text-gray-700">Ism</label>
             <input
               type="text"
               name="name"
@@ -50,25 +50,25 @@ const Register = () => {
             />
           </div>
           <div className="form-group">
-            <label className="block text-gray-700">Email</label>
+            <label className="block text-gray-700">Pochta manzili</label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Enter your email"
+              placeholder="Pochta manzilingizni kiriting"
               required
               className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
           </div>
           <div className="form-group">
-            <label className="block text-gray-700">Password</label>
+            <label className="block text-gray-700">Parol</label>
             <input
               type="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
-              placeholder="Enter your password"
+              placeholder="Parolingizni kiriting"
               required
               className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
@@ -78,7 +78,7 @@ const Register = () => {
           </button>
         </form>
         <div className="text-center mt-4">
-          <p>Already have an account? <span className="text-blue-400 cursor-pointer hover:underline" onClick={navigateToLogin}>Login here</span></p>
+          <p>Akkautingiz allaqachon bormi? <span className="text-blue-400 cursor-pointer hover:underline" onClick={navigateToLogin}>Bu yerdan kirish</span></p>
         </div>
       </div>
     </div>

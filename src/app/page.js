@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
-import React, { useContext, useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { AuthContext } from '@/context/AuthContext';
-import { CarTaxiFront } from 'lucide-react'; // Importing the taxi icon
+import React, { useContext, useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { AuthContext } from "@/context/AuthContext";
+import { CarTaxiFront } from "lucide-react"; // Importing the taxi icon
 
 const regions = [
   { name: "Andijan", image: "Andijan.jpg" },
@@ -32,11 +32,11 @@ const HomePage = () => {
   }, [isAuthenticated, authStatus]);
 
   const navigateToRegister = () => {
-    router.push('/register');
+    router.push("/register");
   };
 
   const navigateToLogin = () => {
-    router.push('/login');
+    router.push("/login");
   };
 
   const handleLogout = async () => {
@@ -44,14 +44,17 @@ const HomePage = () => {
       await logout();
       localStorage.clear();
       setAuthStatus(false);
-      
     } catch (error) {
-      console.error('Error logging out:', error);
+      console.error("Error logging out:", error);
     }
   };
 
   if (authStatus === null) {
-    return <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white">Loading...</div>;
+    return (
+      <div className="flex justify-center items-center min-h-screen bg-gray-900 text-white">
+        Loading...
+      </div>
+    );
   }
 
   return (
@@ -72,20 +75,45 @@ const HomePage = () => {
       <main className="flex flex-col items-center justify-center flex-1 p-4">
         {!authStatus ? (
           <>
-            <h1 className="text-4xl font-bold mb-4">Welcome to My Next.js App</h1>
-            <p className="text-lg mb-8">This is a sample application built with Next.js.</p>
+            <div className="max-w-2xl mx-auto p-4">
+              <h1 className="text-5xl font-bold mb-6 text-center">
+                Assalomu aleykum, My Drivers xizmatiga xush kelibsiz!
+              </h1>
+
+              <p className="text-xl mb-4 text-center">
+                O'zbekiston bo'ylab uzoq masofalarga sayohat
+                rejalashtirdingizmi?
+              </p>
+
+              <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+                Unda bu siz izlayotgan xizmat! My Drivers bilan, siz ishonchli
+                haydovchilar va qulay transport vositalari orqali xavfsiz va
+                yoqimli safar qilishingiz mumkin.
+              </p>
+
+              <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+                Bizning xizmatlarimiz orqali siz O'zbekistonning eng go'zal
+                joylariga sayohat qilishingiz, shuningdek, shaxsiy va ish
+                safarlar uchun qulay yechim topishingiz mumkin.
+              </p>
+
+              <p className="text-lg text-blue-600 font-semibold text-center">
+                Yaxshi sayohat uchun My Drivers - eng yaxshi tanlov!
+              </p>
+            </div>
+
             <div className="flex space-x-4">
               <button
                 onClick={navigateToRegister}
                 className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 cursor-pointer"
               >
-                Register
+                Ro`yhatdan o`tish
               </button>
               <button
                 onClick={navigateToLogin}
                 className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 cursor-pointer"
               >
-                Login
+                Kirish
               </button>
             </div>
           </>
@@ -93,16 +121,18 @@ const HomePage = () => {
           <div className="grid grid-cols-4 gap-4">
             {regions.map((region, index) => (
               <div key={index} className="text-center cursor-pointer">
-                <img src={`/images/${region.image}`} alt={region.name} className="w-full h-48 object-cover rounded" />
+                <img
+                  src={`/images/${region.image}`}
+                  alt={region.name}
+                  className="w-full h-48 object-cover rounded"
+                />
                 <p className="mt-2">{region.name}</p>
               </div>
             ))}
           </div>
         )}
       </main>
-      <footer className="text-center p-4 bg-gray-800">
-        <p>Visit the <a href="https://github.com/TheDarkLord777/drivers" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Next.js GitHub repository</a> for more details.</p>
-      </footer>
+      
     </div>
   );
 };

@@ -2,7 +2,6 @@
 
 import React, { createContext, useEffect, useState } from 'react';
 import LinearIndeterminate from '@/components/progress/progres';
-
 export const AuthContext = createContext({
   isAuthenticated: null,
   userRole: null,
